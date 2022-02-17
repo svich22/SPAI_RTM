@@ -54,7 +54,7 @@ for i in range(-1,3):
 
 
 
-cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+cap = cv2.VideoCapture(1, cv2.CAP_DSHOW) ##for go pro use 1 for webcam use 0
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 cap.set(cv2.CAP_PROP_FPS, 30)
@@ -196,7 +196,8 @@ while success:
 		#cv2.imshow("Preview Predicted", image_cp)
 		#cv2.waitKey(1)
 		image = np.copy(image)
-		cv2.circle(image, (cx_pred, cy_pred), 20, (0,0,255), 2)
+		cv2.circle(image, (cx_pred, cy_pred), 30, (0,0,255), 10)
+		cv2.putText(image, "Shuttlecock", (cx_pred, cy_pred), cv2.FONT_HERSHEY_SIMPLEX, 5, (0,0,255), 5)
 	out.write(image)
 	cv2.imshow("Predict Preview", image)
 	cv2.waitKey(1)

@@ -51,3 +51,5 @@ parser.add_argument('--video_path', type=str, default='test/test.mp4',
                     help='video path to predict')
 parser.add_argument('--label_path', type=str, default='test/test.csv',
                     help='load ground truth csv for predict')
+parser.add_argument('--mode', type=int, default=0,
+                    help='load ground truth csv for predict')

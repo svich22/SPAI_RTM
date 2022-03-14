@@ -167,7 +167,6 @@ input("[+] Press any key to start processing video")
 gray_imgs = deque()
 success, image = cap.read()
 ratio = image.shape[0] / HEIGHT
-print(ratio)
 
 size = (int(WIDTH*ratio), int(HEIGHT*ratio))
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
